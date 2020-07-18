@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: #000;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+}
+
+section .box {
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 200px);
+  width: 400px;
+  height: 400px;
+  transform-style: preserve-3d;
+}
+
+section .box div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) rotateY(20deg) translate3d(-75px,-50px,-150px);
+}
+
+section .box div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, .1);
+  background-color: #ccc;
+}
+section .box div span img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section .box div span:nth-child(1) {
+  transform: rotateX(0deg) translate3d(0, 0, 200px);
+
+}
+section .box div span:nth-child(2) img {
+  transform: rotateY(180deg);
+
+}
+ section .box div span:nth-child(2) {
+  transform: rotateY(90deg) translate3d(0, 0, -200px);
+
+}
+section .box div span:nth-child(3) {
+  transform: rotateX(90deg) translate3d(0, 0, 200px);
+
+} 
+
+/* .wrap {
+	perspective: 700px;
+  perspective-origin: -40% -60px;
+} */
+ .tp{
+  margin-bottom: 10px;
+  margin-top: 60px;
+  margin-left: 20%;
+  perspective: 800px;
+  perspective-origin: 70% -70px;
+  
+ }
+.cube {
+  width: 200px;
+    height: 200px;
+    position: absolute;
+    transform-style: preserve-3d;
+
+}
+.cube div {
+	position: absolute;
+	width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  border: 1px solid rgba(0, 0, 0, .1);
+}
+.cube .side{
+  position: absolute;
+    width: 200px;
+    height: 200px;
+    image-rendering: auto;
+}
+
+.front {
+  transform: rotateY(0deg) translateZ(100px);
+  background: linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(232,232,232,1) 100%);
+}
+.back {
+  transform: rotateX(180deg) translateZ(100px);
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.4), -70px -70px 70px -10px rgba(0, 0, 0, 0.3);
+}
+.right {
+  /* width: 200px;
+    height: 200px;
+    transform: rotate(90deg);
+    object-fit: contain; */
+    transform: rotateY(-270deg) translateX(100px);
+	transform-origin: top right;
+}
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+    background: rgb(215,215,215);
+    background: linear-gradient(90deg, rgba(215,215,215,1) 0%, rgba(187,187,187,1) 100%);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+  background: linear-gradient(90deg, rgba(176,176,177,1) 0%, rgba(152,151,151,1) 100%);
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+  background: #DBDBDB;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+}
+
+
+/* box-shadow: 0px 0px 30px rgba(125, 125, 125, 0.8) inset, 0 0 4px rgba(0, 0, 0, 0); */
